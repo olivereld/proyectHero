@@ -33,3 +33,9 @@
         </form>
     </div>
 </nav>
+
+<app-search-results 
+    *ngIf="listHero.length > 0"
+    [typeOfSearch]="'characters'"
+    [listItems]="listHero">
+</app-search-results>

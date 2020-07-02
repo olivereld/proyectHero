@@ -8,13 +8,14 @@ import { CharacterSectionComponent } from './components/character-section/charac
 import { ComicsSectionComponent } from './components/comics-section/comics-section.component';
 import { CreatorSectionComponent } from './components/creator-section/creator-section.component';
 import { SeriesSectionComponent } from './components/series-section/series-section.component';
-
+import {SearchResultsModule} from '../search-results/search-results.module';
 
 @NgModule({
   declarations: [HomeComponent,NewSectionComponent, CharacterSectionComponent, ComicsSectionComponent, CreatorSectionComponent, SeriesSectionComponent],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    SearchResultsModule
   ],
   exports:[HomeComponent]
 })
