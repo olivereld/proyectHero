@@ -1,29 +1,87 @@
 .news {
-    background-color: var(--var-color-secondary);
-    &_bg-img {
-        background-image: url(https://i.pinimg.com/originals/b0/a3/0b/b0a30b4cef53e8e72d0620c63d1231b8.jpg);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        width: 100vw;
-        height: 40vh;
+    &__bgImg {
+        width: auto;
         margin: 0;
-        border: 2.5px var(--var-color-primary) solid;
+        height: 100vh;
+        position: relative;
+        &--top {
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image: url(src\assets\img\joseph-chan-zC7vO76hEqM-unsplash.jpg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+        }
+        &--bot {
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image: url(src\assets\img\joseph-chan-zC7vO76hEqM-unsplash.jpg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+        }
     }
     &_title {
-        h1 {
-            color: var(--var-color-primary);
-            font-weight: 700;
-            font-size: 36px;
+        height: 100vh;
+        border: 4px var(--var-color-primary) solid;
+        background-color: var(--var-color-secondary);
+        height: 70vh;
+        width: auto;
+        padding: 1.5rem;
+        h2 {
+            text-align: left;
+            color: var(--var-color-ligth) !important;
         }
         p {
-            color: (--var-color-primary);
-            font-size: 24px;
-            font-weight: 400;
+            text-align: justify;
+            width: 50%;
+        }
+        img {
+            margin: 0 auto;
         }
     }
     &_cards {
-        z-index: 10;
-        background-image: url();
+        background-image: url(src\assets\img\hermes-rivera-HMOdnlWzFAM-unsplash.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        height: 65vh;
+        width: auto;
+        &::before {
+            content: "";
+            position: absolute;
+            background-color: rgb(50, 50, 50);
+            background-color: linear-gradient(90deg, rgba(50, 50, 50, 1) 1%, rgba(50, 50, 50, 0.19229690167082458) 95%);
+        }
+    }
+    h1 {
+        color: var(--var-color-secondary);
+        font-weight: 700;
+        font-size: 48px;
+        text-shadow: -2px 0 var(--var-color-primary), 0 2px var(--var-color-primary), 2px 0 var(--var-color-primary), 0 -2px var(--var-color-primary);
+    }
+    h2 {
+        color: var(--var-color-secondary);
+        font-weight: 700;
+        font-size: 36px;
+        text-shadow: -2px 0 var(--var-color-primary), 0 2px var(--var-color-primary), 2px 0 var(--var-color-primary), 0 -2px var(--var-color-primary);
+    }
+    p {
+        color: var(--var-color-ligth);
+        font-size: 24px;
+        font-weight: 400;
     }
 }
