@@ -18,3 +18,10 @@
         <h5 class="card-title">{{comicInfo.name}}</h5>
     </div>
 </div>
+
+<div class="card" *ngIf="typeItem === 'series'">
+    <img class="img-thumbnail" src="{{seriesInfo.image}}" alt="">
+    <div class="card-body">
+        <h5 class="card-title">{{seriesInfo.name}}</h5>
+    </div>
+</div>

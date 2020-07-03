@@ -22,6 +22,7 @@ export class ItemResultsComponent implements OnInit {
 
   heroInfo:I_hero;
   comicInfo;
+  seriesInfo;
   constructor() { }
 
   ngOnInit(): void {
@@ -37,6 +38,11 @@ export class ItemResultsComponent implements OnInit {
         break;
       } 
       case 'series':{
+        this.seriesInfo = {
+          id:this.attributes.id,
+          name:this.attributes.title,
+          image:this.attributes.thumbnail.path+'.'+this.attributes.thumbnail.extension
+        }
         break;
       } 
       case 'comics':{
