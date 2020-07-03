@@ -1,21 +1,17 @@
 <div class="container">
-    <div class="row">
-        <app-item-results
-        *ngFor="let item of listItems"
-        class="col-lg-3"
-        [typeItem]="typeOfSearch"
-        [attributes]="item">
+    <div class="card-columns">
+        <app-item-results *ngFor="let item of listItems" class="" [typeItem]="typeOfSearch" [attributes]="item">
 
-        </app-item-results>    
-    </div> 
-       
+        </app-item-results>
+    </div>
+
 </div>
 <nav aria-label="Page navigation example mt-5" *ngIf="listItems.length > 0">
     <ul class="pagination justify-content-center">
-      
-      <li class="page-item ">
-        <a class="page-link" (click)="previousPage()">Previous</a>
-      </li>
+
+        <li class="page-item ">
+            <a class="page-link" (click)="previousPage()">Previous</a>
+        </li>
 
         <!--Primer indice-->
         <li class="page-item" [ngClass]="{'active': actualIndex === 1}">
@@ -37,13 +33,13 @@
         <li class="page-item" [ngClass]="{'active': actualIndex === listOfPositions.length+1}">
             <a class="page-link" (click)="searchPerNumber(listOfPositions.length+1)">{{listOfPositions.length+1}}</a>
         </li>
-      
-      <li class="page-item">
-        <a class="page-link" (click)="nextPage()">Next</a>
-      </li>
+
+        <li class="page-item">
+            <a class="page-link" (click)="nextPage()">Next</a>
+        </li>
 
     </ul>
-  </nav>
+</nav>
 
 
 <!-- 
