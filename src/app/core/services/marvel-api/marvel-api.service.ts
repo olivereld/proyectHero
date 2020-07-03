@@ -37,6 +37,14 @@ export class MarvelApiService {
     let request = URL["URL_CHARACTERS"]+credentials['public-key']+'&offset='+offset+'&hash='+this.hash;
     return this.http.get(request);
   }
+  public getHerosByName = (
+    name:string,
+    offset:number
+  )=>{
+    console.log(this.hash);
+    let request = URL["URL_CHARACTERS"]+credentials['public-key']+'&offset='+offset+'&hash='+this.hash;
+    return this.http.get(request);
+  }
 
   public getComics = (
     limit:number,
@@ -52,7 +60,7 @@ export class MarvelApiService {
     offset:number
   )=>{
     console.log(this.hash);
-    let request = URL["URL_CREATORS"]+credentials['public-key']+'&hash='+this.hash;
+    let request = URL["URL_CREATORS"]+credentials['public-key']+'&offset='+offset+'&hash='+this.hash;
     return this.http.get(request);
   }
 

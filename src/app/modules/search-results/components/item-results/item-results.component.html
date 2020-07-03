@@ -1,25 +1,28 @@
-<!-- <div class="card" *ngIf="typeItem === 'characters'">
+<div id="cardCharacter" class="card" *ngIf="typeItem === 'characters'">
     <img class="img-thumbnail" src="{{heroInfo.image}}" alt="">
     <div class="card-body">
         <h5 class="card-title">{{heroInfo.name}}</h5>
-    </div>
-</div> -->
-<div class="card" *ngIf="typeItem === 'characters'">
-    <img class="img-thumbnail" src="{{heroInfo.image}}" alt="">
-    <div class="card-body">
-        <h5 class="card-title">{{heroInfo.name}}</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text">Numbers of comics:{{heroInfo.comics}}.</p>
+        <p class="card-text">Numbers of series:{{heroInfo.series}}.</p>
     </div>
 </div>
 
-<div class="card" *ngIf="typeItem === 'comics'">
+<div id="cardComic" class="card" *ngIf="typeItem === 'comics'">
     <img class="img-thumbnail" src="{{comicInfo.image}}" alt="">
     <div class="card-body">
         <h5 class="card-title">{{comicInfo.name}}</h5>
     </div>
 </div>
 
-<div class="card" *ngIf="typeItem === 'series'">
+<div id="cardCreator" class="card" *ngIf="typeItem === 'creators'">
+    <img class="img-thumbnail" src="{{creatorInfo.image}}" alt="">
+    <div class="card-body">
+        <h5 class="card-title">{{creatorInfo.name}}</h5>
+    </div>
+</div>
+
+
+<div id="cardSerie" class="card" *ngIf="typeItem === 'series'">
     <img class="img-thumbnail" src="{{seriesInfo.image}}" alt="">
     <div class="card-body">
         <h5 class="card-title">{{seriesInfo.name}}</h5>

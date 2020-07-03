@@ -5,6 +5,8 @@ interface I_hero {
   id:string;
   name:string;
   description:string;
+  comics:number;
+  series:number;
   urlDetails:string;
   image:string;
 }
@@ -23,6 +25,7 @@ export class ItemResultsComponent implements OnInit {
   heroInfo:I_hero;
   comicInfo;
   seriesInfo;
+  creatorInfo;
   constructor() { }
 
   ngOnInit(): void {
@@ -31,6 +34,8 @@ export class ItemResultsComponent implements OnInit {
         this.heroInfo = {
           id:this.attributes.id,
           name:this.attributes.name,
+          comics: this.attributes.comics.items.length,
+          series: this.attributes.series.items.length,
           description:this.attributes.description,
           urlDetails:this.attributes.urls[0].url,
           image:this.attributes.thumbnail.path+'.'+this.attributes.thumbnail.extension
@@ -54,6 +59,11 @@ export class ItemResultsComponent implements OnInit {
         break;
       }
       case 'creators':{
+        this.creatorInfo = {
+          id:this.attributes.id,
+          name:this.attributes.firstName + ' ' + this.attributes.lastName,
+          image:this.attributes.thumbnail.path+'.'+this.attributes.thumbnail.extension
+        }
         break;
       }                 
     
