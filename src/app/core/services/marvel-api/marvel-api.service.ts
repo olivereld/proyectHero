@@ -43,7 +43,7 @@ export class MarvelApiService {
     offset:number
   )=>{
     console.log(this.hash);
-    let request = URL["URL_COMICS"]+credentials['public-key']+'&hash='+this.hash;
+    let request = URL["URL_COMICS"]+credentials['public-key']+'&offset='+offset+'&hash='+this.hash;
     return this.http.get(request);
   }
 

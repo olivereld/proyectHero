@@ -1,1 +1,18 @@
 <p>comics-section works!</p>
+<div class="jumbotron">
+    <h1 class="display-4">All comics of marvel</h1>
+    <p class="lead">Find your favorite comic</p>
+    <hr class="my-4">
+    <p>Content</p>
+</div>
+
+<span>aca</span>
+<app-search-results 
+    *ngIf="listComic.length > 0"
+    [typeOfSearch]="'comics'"
+    [listItems]="listComic"
+    [limit]="limitItems"
+    [offset]="actualOffset"
+    (paginate)="nextPage($event)"
+    (goIndex)="setOffset($event)">
+</app-search-results>

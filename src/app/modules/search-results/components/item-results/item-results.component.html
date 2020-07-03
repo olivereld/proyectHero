@@ -1,6 +1,13 @@
-<div class="card">
+<div class="card" *ngIf="typeItem === 'characters'">
     <img class="img-thumbnail" src="{{heroInfo.image}}" alt="">
     <div class="card-body">
         <h5 class="card-title">{{heroInfo.name}}</h5>
+    </div>
+</div>
+
+<div class="card" *ngIf="typeItem === 'comics'">
+    <img class="img-thumbnail" src="{{comicInfo.image}}" alt="">
+    <div class="card-body">
+        <h5 class="card-title">{{comicInfo.name}}</h5>
     </div>
 </div>
