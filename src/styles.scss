@@ -1,12 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+
 @import "~bootstrap/scss/bootstrap.scss";
-:root{
-    --var-color-primary:#273c75;
-    --var--color-primary-d:#192a56;
-
-    --var--color-secondary:#e84118;
-    --var--color-secondary-d:#c23616;
-
-    --var--color-ligth:#f5f6fa;
-    --var--color-ligth-d:#dcdde1;
+:root {
+    --var-color-primary: #323232;
+    --var-color-secondary: #e73334;
+    --var-color-thirdy: #000;
+    --var-color-ligth: #fff;
 }

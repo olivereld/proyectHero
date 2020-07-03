@@ -1,0 +1,29 @@
+.news {
+    background-color: var(--var-color-secondary);
+    &_bg-img {
+        background-image: url(https://i.pinimg.com/originals/b0/a3/0b/b0a30b4cef53e8e72d0620c63d1231b8.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 100vw;
+        height: 40vh;
+        margin: 0;
+        border: 2.5px var(--var-color-primary) solid;
+    }
+    &_title {
+        h1 {
+            color: var(--var-color-primary);
+            font-weight: 700;
+            font-size: 36px;
+        }
+        p {
+            color: (--var-color-primary);
+            font-size: 24px;
+            font-weight: 400;
+        }
+    }
+    &_cards {
+        z-index: 10;
+        background-image: url();
+    }
+}
