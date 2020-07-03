@@ -29,25 +29,37 @@ export class MarvelApiService {
     console.log(this.hash);
    }
 
-  public getHeros = ()=>{
+  public getHeros = (
+    limit:number,
+    offset:number
+  )=>{
     console.log(this.hash);
-    let request = URL["URL_CHARACTERS"]+credentials['public-key']+'&hash='+this.hash;
+    let request = URL["URL_CHARACTERS"]+credentials['public-key']+'&offset='+offset+'&hash='+this.hash;
     return this.http.get(request);
   }
 
-  public getComics = ()=>{
+  public getComics = (
+    limit:number,
+    offset:number
+  )=>{
     console.log(this.hash);
     let request = URL["URL_COMICS"]+credentials['public-key']+'&hash='+this.hash;
     return this.http.get(request);
   }
 
-  public getCreators = ()=>{
+  public getCreators = (
+    limit:number,
+    offset:number
+  )=>{
     console.log(this.hash);
     let request = URL["URL_CREATORS"]+credentials['public-key']+'&hash='+this.hash;
     return this.http.get(request);
   }
 
-  public getSeries = ()=>{
+  public getSeries = (
+    limit:number,
+    offset:number
+  )=>{
     console.log(this.hash);
     let request = URL["URL_SERIES"]+credentials['public-key']+'&hash='+this.hash;
     return this.http.get(request);

@@ -11,8 +11,11 @@ export class CharactersService {
    }
 
    
-   public getHeroList = () => {       
-       return this.api.getHeros();
+   public getHeroList = (
+    limit:number,
+    offset:number
+   ) => {       
+       return this.api.getHeros(20,offset);
    }
    
 

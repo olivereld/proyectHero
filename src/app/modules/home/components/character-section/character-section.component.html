@@ -13,19 +13,19 @@
     </button>
     <div class="collapse navbar-collapse" id="collapsibleNavId">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <li class="nav-item ml-2 mr-2">                           
+                <span>Page size</span>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+            
+            <li class="nav-item ">                              
+                <select class="col-6" name="page-size" class="custom-select" id="inputGroupSelect01">
+                    <option value="20">20</option>
+                    <option value="15">15</option>
+                    <option value="10">10</option>
+                    <option value="5">5</option>
+                </select>    
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                <div class="dropdown-menu" aria-labelledby="dropdownId">
-                    <a class="dropdown-item" href="#">Action 1</a>
-                    <a class="dropdown-item" href="#">Action 2</a>
-                </div>
-            </li>
+            
         </ul>
         <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="text" placeholder="Search">
@@ -37,5 +37,9 @@
 <app-search-results 
     *ngIf="listHero.length > 0"
     [typeOfSearch]="'characters'"
-    [listItems]="listHero">
+    [listItems]="listHero"
+    [limit]="limitItems"
+    [offset]="actualOffset"
+    (paginate)="nextPage($event)"
+    (goIndex)="setOffset($event)">
 </app-search-results>
