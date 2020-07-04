@@ -41,5 +41,6 @@
     [limit]="limitItems"
     [offset]="actualOffset"
     (paginate)="nextPage($event)"
-    (goIndex)="setOffset($event)">
+    (goIndex)="setOffset($event)"
+    (abecedaryResult)="chacarterByLetter($event)">
 </app-search-results>

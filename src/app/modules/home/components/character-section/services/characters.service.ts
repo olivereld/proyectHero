@@ -17,6 +17,13 @@ export class CharactersService {
    ) => {       
        return this.api.getHeros(20,offset);
    }
+
+   public getHeroByFirstFilter = (
+    letter:string,
+    offset:number
+   ) => {       
+       return this.api.getHerosByNameStart(letter,offset);
+   }
    
 
 }
