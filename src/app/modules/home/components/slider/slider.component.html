@@ -1,0 +1,13 @@
+<div class="hero">
+    <ngb-carousel>
+        <ng-template *ngFor="let new of news" ngbSlide>
+            <div class="hero__carousel picsum-img-wrapper text-center">
+                <img src="{{new.img}}" alt="Random first slide">
+            </div>
+            <div class="carousel-caption">
+                <h3>{{new.title}}</h3>
+                <p>{{new.desc}}</p>
+            </div>
+        </ng-template>
+    </ngb-carousel>
+</div>
