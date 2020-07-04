@@ -12,7 +12,7 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background-image: url(src\assets\img\joseph-chan-zC7vO76hEqM-unsplash.jpg);
+                background-image: url("src/assets/img/hermes-rivera-HMOdnlWzFAM-unsplash.jpg");
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: cover;
@@ -26,7 +26,7 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background-image: url(src\assets\img\joseph-chan-zC7vO76hEqM-unsplash.jpg);
+                background-image: url("src/assets/img/joseph-chan-zC7vO76hEqM-unsplash.jpg");
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: cover;
@@ -34,38 +34,47 @@
         }
     }
     &_title {
+        position: relative;
         height: 100vh;
         border: 4px var(--var-color-primary) solid;
-        background-color: var(--var-color-secondary);
         height: 70vh;
         width: auto;
         padding: 1.5rem;
         h2 {
             text-align: left;
             color: var(--var-color-ligth) !important;
+            z-index: 10;
         }
         p {
             text-align: justify;
             width: 50%;
+            z-index: 10;
         }
         img {
-            margin: 0 auto;
+            width: 70%;
+        }
+        &::after {
+            content: "";
+            background: linear-gradient(320deg, rgba(231, 51, 52, .5) 0%, rgba(231, 51, 52, .5) 65%, rgba(255, 255, 255, 0.0) 65%);
+            background-repeat: no-repeat;
+            background-position: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
         }
     }
     &_cards {
-        background-image: url(src\assets\img\hermes-rivera-HMOdnlWzFAM-unsplash.jpg);
+        background-image: url("src/assets/img/jack-o-rourke-orQhl6Is5Uw-unsplash.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
         position: relative;
         height: 65vh;
         width: auto;
-        &::before {
-            content: "";
-            position: absolute;
-            background-color: rgb(50, 50, 50);
-            background-color: linear-gradient(90deg, rgba(50, 50, 50, 1) 1%, rgba(50, 50, 50, 0.19229690167082458) 95%);
-        }
+        top: 0;
+        left: 0;
     }
     h1 {
         color: var(--var-color-secondary);

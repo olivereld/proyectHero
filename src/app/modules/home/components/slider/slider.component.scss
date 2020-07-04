@@ -1,0 +1,10 @@
+.hero {
+    &__carousel {
+        width: 100vw;
+        height: 65vh;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
