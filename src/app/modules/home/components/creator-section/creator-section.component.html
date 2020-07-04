@@ -1,1 +1,17 @@
-<p>creator-section works!</p>
+<p>comics-section works!</p>
+<div class="jumbotron">
+    <h1 class="display-4">All creators of marvel</h1>
+    <p class="lead">Follow you favorite creator</p>
+    <hr class="my-4">
+    <p>Content</p>
+</div>
+
+<app-search-results 
+    *ngIf="listCreator.length > 0"
+    [typeOfSearch]="'creators'"
+    [listItems]="listCreator"
+    [limit]="limitItems"
+    [offset]="actualOffset"
+    (paginate)="nextPage($event)"
+    (goIndex)="setOffset($event)">
+</app-search-results>

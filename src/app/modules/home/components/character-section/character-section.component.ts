@@ -26,6 +26,22 @@ export class CharacterSectionComponent implements OnInit {
     );
   }
 
+  chacarterByLetter(search:any){
+    this.actualOffset = search.page;
+    this.characterService.getHeroByFirstFilter(search.letter,this.actualOffset)
+    .subscribe(
+      (data)=>{
+        let heroList:any = data;
+        this.limitItems = heroList.data.total; 
+        console.log('total resultados',this.limitItems);
+        this.listHero = heroList.data.results;
+      },
+      (err)=>{
+        console.log(err);
+      }
+    );
+  }
+
   nextPage(plusPage:number){
     this.actualOffset += plusPage;
     console.log(this.actualOffset)
@@ -52,7 +68,11 @@ export class CharacterSectionComponent implements OnInit {
     if( this.actualOffset <= this.limitItems && this.actualOffset >= 0){
       this.characterService.getHeroList(20,this.actualOffset).subscribe(
         (data) => {
-          let heroList:any = data;        
+          let heroList:any = data;   
+          let newLimit =  heroList.data.total;
+          if(newLimit != this.limitItems){
+            this.limitItems = newLimit;
+          }               
           this.listHero = heroList.data.results;
         },
         (err) => {

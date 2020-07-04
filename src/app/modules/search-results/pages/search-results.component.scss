@@ -1,0 +1,13 @@
+.letter-box{
+    a{  
+        background-color: var(--var-color-primary);
+        color:white;
+        cursor: pointer;
+        &:hover{
+            background-color: var(--var-color-secondary);
+        }
+        &:active{
+            color: var(--var-color-secondary);
+        }
+    }
+}
