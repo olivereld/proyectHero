@@ -1,39 +1,6 @@
 .news {
-    &__bgImg {
-        width: auto;
-        margin: 0;
-        height: 100vh;
-        position: relative;
-        &--top {
-            &::before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-image: url("src/assets/img/hermes-rivera-HMOdnlWzFAM-unsplash.jpg");
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: cover;
-            }
-        }
-        &--bot {
-            &::before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-image: url("src/assets/img/joseph-chan-zC7vO76hEqM-unsplash.jpg");
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: cover;
-            }
-        }
-    }
     &__title {
+        text-align: center;
         h3 {
             font-size: 40px;
             line-height: 52px;
@@ -43,21 +10,37 @@
             padding-bottom: 6rem;
         }
     }
-    &__cards {
-        padding: 20px 35px 20px 35px;
-        border: 2px solid #E8E8E8;
-        transition: ease 0.5s;
-        margin-bottom: 30px;
-        border-radius: 5px;
-        opacity: 0.5;
-        &--icon {
-            img {
-                height: 70px;
+    &__cards--container {
+        padding-bottom: 6rem;
+        &__card {
+            padding: 20px 35px 20px 35px;
+            border: 2px solid #E8E8E8;
+            transition: ease 0.5s;
+            margin-bottom: 30px;
+            border-radius: 5px;
+            opacity: 0.5;
+            &--icon {
+                img {
+                    height: 70px;
+                }
+            }
+            &:hover {
+                border: 2px solid var(--var-color-primary);
+                opacity: 1;
             }
         }
-        &:hover {
-            border: 2px solid var(--var-color-primary);
-            opacity: 1;
+    }
+    &__featured {
+        color: var(--var-color-primary);
+        padding-bottom: 6rem;
+        h3 {
+            font-size: 36px;
+            margin-bottom: 2rem;
+        }
+        p {
+            font-size: 20px;
+            font-weight: 400;
+            width: 70%;
         }
     }
     &__about {
@@ -94,35 +77,8 @@
                 font-weight: 400;
                 margin-bottom: 14px;
                 color: #C9C9C9;
+                width: 80%;
             }
         }
-    }
-    &_cards {
-        background-image: url("src/assets/img/jack-o-rourke-orQhl6Is5Uw-unsplash.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        position: relative;
-        height: 65vh;
-        width: auto;
-        top: 0;
-        left: 0;
-    }
-    h1 {
-        color: var(--var-color-secondary);
-        font-weight: 700;
-        font-size: 48px;
-        text-shadow: -2px 0 var(--var-color-primary), 0 2px var(--var-color-primary), 2px 0 var(--var-color-primary), 0 -2px var(--var-color-primary);
-    }
-    h2 {
-        color: var(--var-color-secondary);
-        font-weight: 700;
-        font-size: 36px;
-        text-shadow: -2px 0 var(--var-color-primary), 0 2px var(--var-color-primary), 2px 0 var(--var-color-primary), 0 -2px var(--var-color-primary);
-    }
-    p {
-        color: var(--var-color-ligth);
-        font-size: 24px;
-        font-weight: 400;
     }
 }

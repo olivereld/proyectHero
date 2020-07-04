@@ -1,5 +1,5 @@
 <div class="hero">
-    <ngb-carousel>
+    <ngb-carousel [showNavigationArrows]="showNavigationArrows">
         <ng-template *ngFor="let new of news" ngbSlide>
             <div class="hero__carousel picsum-img-wrapper text-center">
                 <img src="{{new.img}}" alt="">
